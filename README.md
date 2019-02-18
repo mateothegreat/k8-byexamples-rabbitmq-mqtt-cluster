@@ -9,11 +9,10 @@
 #-->
 
 [![Clickity click](https://img.shields.io/badge/k8s%20by%20example%20yo-limit%20time-ff69b4.svg?style=flat-square)](https://k8.matthewdavis.io)
-[![Twitter Follow](https://img.shields.io/twitter/follow/yomateod.svg?label=Follow&style=flat-square)](https://twitter.com/yomateod) [![Skype Contact](https://img.shields.io/badge/skype%20id-appsoa-blue.svg?style=flat-square)](skype:appsoa?chat)
+[![Twitter Follow](https://img.shields.io/twitter/follow/yomateod.svg?label=Follow&style=flat-square)](https://twitter.com/yomateod) [![Skype Contact](https://img.shields.io/badge/skype%20id-matthew@matthewdavis.io-blue.svg?style=flat-square)](skype:appsoa?chat)
 
-# Kubernetes @ RabbitMQ 3.7 Cluster using Peer Discovery
+# Kubernetes @ RabbitMQ 3.7 + MQTT Cluster using Peer Discovery
 
-_can you hear me now?_
 > k8 by example -- straight to the point, simple execution.
 
 ## Usage

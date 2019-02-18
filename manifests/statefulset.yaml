@@ -13,8 +13,9 @@ spec:
       serviceAccountName: rabbitmq
       terminationGracePeriodSeconds: 10
       containers:
-      - name: rabbitmq-k8s
-        image: mateothegreat/docker-alpine-rabbitmq-mqtt:latest
+      - name: $APP
+        image: rabbitmq:3.7.9-alpine
+        imagePullPolicy: Always
         volumeMounts:
           - name: config-volume
             mountPath: /etc/rabbitmq
@@ -25,6 +26,9 @@ spec:
           - name: amqp
             protocol: TCP
             containerPort: 5672
+          - name: stomp
+            protocol: TCP
+            containerPort: 61613
         livenessProbe:
           exec:
             command: ["rabbitmqctl", "status"]
@@ -35,7 +39,6 @@ spec:
             command: ["rabbitmqctl", "status"]
           initialDelaySeconds: 10
           timeoutSeconds: 10
-        imagePullPolicy: Always
         env:
           - name: MY_POD_IP
             valueFrom:

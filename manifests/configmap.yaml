@@ -4,7 +4,7 @@ metadata:
   name: rabbitmq-config
 data:
   enabled_plugins: |
-      [rabbitmq_management,rabbitmq_peer_discovery_k8s,accept,prometheus,prometheus_cowboy,prometheus_httpd,prometheus_rabbitmq_exporter].
+      [rabbitmq_management,rabbitmq_peer_discovery_k8s,rabbitmq_web_mqtt,rabbitmq_web_stomp].
   rabbitmq.conf: |
       ## Clustering
       cluster_formation.peer_discovery_backend  = rabbit_peer_discovery_k8s
@@ -13,8 +13,7 @@ data:
       cluster_formation.node_cleanup.interval = 10
       cluster_formation.node_cleanup.only_log_warning = false
       cluster_partition_handling = autoheal
-      ## queue master locator 
+      ## queue master locator
       queue_master_locator=min-masters
-      ## enable guest user  
+      ## enable guest user
       loopback_users.guest = false
-   

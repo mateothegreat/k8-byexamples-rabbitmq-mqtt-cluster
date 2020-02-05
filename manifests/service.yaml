@@ -1,9 +1,9 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: rabbitmq
+  name: $APP
   labels:
-    app: rabbitmq
+    app: $APP
 #    type: LoadBalancer
 spec:
   type: NodePort
